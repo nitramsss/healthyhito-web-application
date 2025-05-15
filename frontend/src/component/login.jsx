@@ -17,13 +17,16 @@ function LogIn() {
         };
 
         try {
-            const response = await axios.post(
+            const { data } = await axios.post(
                 "http://127.0.0.1:8000/token/",
                 user
             );
-            const { token, refreshToken } = response.data;
+            
 
-            console.log(response);
+            const token = data.access;
+            const refreshToken = data.refresh;
+
+            console.log("Response:", data);
 
             localStorage.clear();
             localStorage.setItem("token", token);
@@ -31,10 +34,13 @@ function LogIn() {
 
             console.log(token);
             console.log(refreshToken);
-
-            navigate("/");
-        } catch (err) {
-            console.error("Error:", err);
+            
+            if (token !== null){
+                navigate("/");
+            }
+            
+        } catch (err){
+            console.error("Auth Error:", err);
         }
     };
 
