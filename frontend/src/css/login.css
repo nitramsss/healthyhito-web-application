@@ -1,4 +1,3 @@
-/* Inside src/App.css */
 
 body {
     height: 100vh;
@@ -9,7 +8,6 @@ body {
 
 .title {
     text-align: center;
-    width: 30vw;
     background-color: rgb(190, 164, 214);
     padding: 2vw 1vw;
     border-radius: 10px 10px 0 0;
@@ -20,9 +18,8 @@ body {
 .login-form {
     text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: ;
     margin: auto;
-    width: 30vw;
     padding: 2vw 1vw;
     background-color: rgb(250, 194, 194);
     border-radius: 0 0 10px 10px;

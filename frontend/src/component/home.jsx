@@ -7,11 +7,12 @@ function Home() {
     const [user, setUser] = useState("");
     const navigate = useNavigate();
 
-    useEffect(
-        () => async () => {
+    useEffect(() => {
+        
+        
+        const home = async () => {
             // Check if token is null
             if (localStorage.getItem("token") === null) {
-                console.log("access token is null");
                 navigate("/login");
             } else {
                 console.log("Access Token:", localStorage.getItem("token"));
@@ -22,7 +23,9 @@ function Home() {
                         "http://127.0.0.1:8000/home/",
                         {
                             headers: {
-                                Authorization: `Bearer ${localStorage.getItem("token")}`,
+                                Authorization: `Bearer ${localStorage.getItem(
+                                    "token"
+                                )}`,
                             },
                         }
                     );
@@ -30,18 +33,37 @@ function Home() {
                     console.log(data);
 
                     setMessage(data.message);
-                    setUser(data.user);
+                    setUser(
+                        data.user
+                            .toLowerCase()
+                            .split(" ")
+                            .map(
+                                (word) =>
+                                    word.charAt(0).toUpperCase() + word.slice(1)
+                            )
+                            .join(" ")
+                    );
                 } catch (err) {
                     console.error("Home Error:", err);
+                    if (err.response && err.response.status === 401){
+                        localStorage.clear();
+                        navigate("/login");
+                    }
                 }
             }
-        },
-        []
-    );
+        };
+
+        home();
+
+    }, []);
 
     return (
         <>
-            <h1>Hello {user}!</h1>
+            <h1>
+                {localStorage.getItem("token")
+                    ? `Hello ${user}!`
+                    : "Unauthorized"}
+            </h1>
             <p>{message}</p>
         </>
     );
