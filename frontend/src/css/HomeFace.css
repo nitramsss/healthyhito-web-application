@@ -24,11 +24,3 @@ h1 {
 
 }
 
-.startGenerating-btn {
-    background-color: var(--primary-color);
-    font-weight: bold;
-    border-radius: 50px;
-    padding: 15px 30px 15px 30px;
-    font-size: 22px;
-    margin-top: 30px;
-}
