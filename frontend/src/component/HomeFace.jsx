@@ -1,5 +1,6 @@
 import "../css/HomeFace.css";
 import "../css/Root.css";
+import LogInBody from "./LogInBody";
 
 import MealForm from "./MealForm";
 
@@ -16,6 +17,7 @@ function HomeFace() {
                     <br /> than what you’d pay a trainer for one session.
                 </p>
                 <MealForm />
+
             </div>
         </>
     );

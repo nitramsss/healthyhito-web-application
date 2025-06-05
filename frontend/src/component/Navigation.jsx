@@ -1,6 +1,9 @@
 import "../css/Navigation.css";
 import "../css/Root.css"
 
+import LogIn from "./LogIn";
+
+
 function Navigation() {
     return (
         <>
@@ -14,7 +17,7 @@ function Navigation() {
                     </ul>
                 </div>
                 <div className="auth-btn">
-                    <button className="logIn-btn">LogIn</button>
+                    <LogIn className="logIn-btn" />
                     <button className="tryForFree-btn">Try for free</button>
                 </div>
             </div>

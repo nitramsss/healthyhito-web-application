@@ -5,11 +5,14 @@ import Modal from 'react-bootstrap/Modal';
 import "../css/MealForm.css"
 import MealFormBody from './MealFormBody';
 
+
 function MealForm() {
   const [show, setShow] = useState(false);
+  const [isLogin, setIsLogin] = useState(false)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
 
   return (
     <>
