@@ -15,10 +15,12 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    /* border: 2px solid black; */
+    padding: 0;
 }
 
 .logo-img {
-    margin: 2%;
+    margin-right: 2%;
     width: 10%;
     height: 10%;
 }
