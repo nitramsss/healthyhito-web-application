@@ -1,5 +1,8 @@
 import "../css/HomeFace.css";
 import "../css/Root.css";
+import LogInBody from "./LogInBody";
+
+import MealForm from "./MealForm";
 
 function HomeFace() {
     return (
@@ -13,9 +16,8 @@ function HomeFace() {
                     <span>all for less</span>
                     <br /> than what you’d pay a trainer for one session.
                 </p>
-                <button className="startGenerating-btn">
-                    Start Generating
-                </button>
+                <MealForm />
+
             </div>
         </>
     );

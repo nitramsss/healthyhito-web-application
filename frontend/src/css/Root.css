@@ -1,4 +1,8 @@
 :root {
     --primary-color: rgb(141, 230, 52);
+    --secondary-color: rgb(177, 175, 175);
+    --primary-hover-color: rgb(132, 255, 0);
+    --secondary-hover-color: rgb(218, 217, 217);
     --text-colors: rgb(12, 12, 12);
+    --text-font: Arial, Helvetica, sans-serif;
 }

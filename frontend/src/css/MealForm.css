@@ -1,0 +1,39 @@
+.startGenerating-btn {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 15px 30px 15px 30px;
+    font-size: 22px;
+    margin-top: 30px;
+    border: none;
+    color: var(--text-color);
+
+}
+
+.startGenerating-btn:hover {
+    background-color: var(--primary-hover-color);
+    color: var(--text-color);
+
+}
+
+.generate-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+}
+
+.generate-btn:hover {
+    color: var(--text-color);
+    background-color: var(--primary-hover-color);
+}
+
+.close-btn {
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    border: none;
+}
+
+.close-btn:hover {
+    color: var(--text-color);
+    background-color: var(--secondary-hover-color);
+}
